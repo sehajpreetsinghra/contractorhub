@@ -1,0 +1,1 @@
+export default function Page() { return <main className="p-10"><h1 className="text-3xl font-bold text-navy">Contractor link expired</h1><p>This secure submission link has passed its expiry time. Contact your SRIC sponsor.</p></main>; }
