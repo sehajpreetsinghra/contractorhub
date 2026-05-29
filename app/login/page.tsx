@@ -1,0 +1,2 @@
+import { ActionButton, PanelCard } from "@/components/ui";
+export default function Page() { return <main className="grid min-h-screen place-items-center bg-gray-bg p-6"><PanelCard title="Internal login" eyebrow="Supabase Auth ready"><div className="space-y-3"><input className="w-full rounded-xl border border-border px-3 py-2" placeholder="Email" /><input className="w-full rounded-xl border border-border px-3 py-2" placeholder="Password" type="password" /><ActionButton>Sign in</ActionButton></div></PanelCard></main>; }
