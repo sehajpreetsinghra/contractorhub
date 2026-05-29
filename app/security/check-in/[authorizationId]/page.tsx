@@ -1,0 +1,5 @@
+import { FeedbackActionButton } from "@/components/action-feedback";
+import { PanelCard } from "@/components/ui";
+export default function CheckIn({ params }: { params: { authorizationId: string } }) {
+  return <main className="min-h-screen bg-gray-bg p-8"><div className="mx-auto max-w-4xl"><PanelCard title="Security Check-In" eyebrow={params.authorizationId}><form className="grid gap-4 md:grid-cols-2">{["Worker", "Company", "Badge Number", "Access Device Number", "Escort Name", "Work Area Confirmed", "Checked In By", "Check-In Date/Time"].map((label) => <input key={label} className="rounded-xl border border-border px-3 py-2" placeholder={label} />)}{["ID Verified", "Badge Issued", "Key/Fob Issued"].map((label) => <label key={label} className="flex items-center gap-2 rounded-xl border border-border p-3"><input type="checkbox" />{label}</label>)}<textarea className="md:col-span-2 rounded-xl border border-border px-3 py-2" placeholder="Check-In Notes" /><div className="md:col-span-2"><FeedbackActionButton label="Complete Check-In" message="Check-in recorded and contractor marked on site." /></div></form></PanelCard></div></main>;
+}

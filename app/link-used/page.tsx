@@ -1,0 +1,1 @@
+export default function Page() { return <main className="p-10"><h1 className="text-3xl font-bold text-navy">Contractor link already used</h1><p>This token has already been submitted and cannot be reused.</p></main>; }

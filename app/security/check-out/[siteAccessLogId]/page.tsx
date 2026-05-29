@@ -1,0 +1,5 @@
+import { FeedbackActionButton } from "@/components/action-feedback";
+import { PanelCard } from "@/components/ui";
+export default function CheckOut({ params }: { params: { siteAccessLogId: string } }) {
+  return <main className="min-h-screen bg-gray-bg p-8"><div className="mx-auto max-w-4xl"><PanelCard title="Security Check-Out" eyebrow={params.siteAccessLogId}><form className="grid gap-4 md:grid-cols-2">{["Check-Out Date/Time", "Checked Out By"].map((label) => <input key={label} className="rounded-xl border border-border px-3 py-2" placeholder={label} />)}{["Badge Returned", "Key/Fob Returned", "Work Completed", "Issue Observed"].map((label) => <label key={label} className="flex items-center gap-2 rounded-xl border border-border p-3"><input type="checkbox" />{label}</label>)}<textarea className="md:col-span-2 rounded-xl border border-border px-3 py-2" placeholder="Checkout Notes" /><div className="md:col-span-2"><FeedbackActionButton label="Complete Check-Out" message="Check-out recorded and access items confirmed for return review." /></div></form></PanelCard></div></main>;
+}

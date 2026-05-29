@@ -1,0 +1,5 @@
+import { FeedbackActionButton } from "@/components/action-feedback";
+import { PanelCard } from "@/components/ui";
+export default function NewWorkRequestPage() {
+  return <main className="min-h-screen bg-gray-bg p-8"><div className="mx-auto max-w-5xl"><PanelCard title="Tenant Work Request" eyebrow="Sponsored access only"><form className="grid gap-4 md:grid-cols-2">{["Work Title", "Work Location", "Requested Start", "Requested End", "Contractor Contact Email", "Sponsor / Tenant"].map((label) => <label key={label} className="text-sm font-semibold">{label}<input className="mt-2 w-full rounded-xl border border-border px-3 py-2" placeholder={label} /></label>)}<label className="md:col-span-2 text-sm font-semibold">Work Description<textarea className="mt-2 min-h-28 w-full rounded-xl border border-border px-3 py-2" /></label><div className="md:col-span-2 flex gap-3"><FeedbackActionButton label="Create Work Request & Contractor Link" message="Work Request SRIC-WR-2026-0004 created and contractor link generated." /><FeedbackActionButton label="Save Draft" message="Draft work request saved." variant="secondary" /></div></form></PanelCard></div></main>;
+}
